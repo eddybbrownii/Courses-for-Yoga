@@ -211,8 +211,8 @@ ul li a:hover {
   font-weight: bold;
   color: #333;
   text-decoration: none;
-  color: white;
-  max-width: 40% !important;
+  color: black;
+  max-width: 60% !important;
 }
 .search-button {
   display: flex;
@@ -222,11 +222,11 @@ ul li a:hover {
   justify-content: space-around;
   justify-items: space-around;
   border: 2px black solid;
-  background-color: aquamarine;
+  background-color: transparent;
   color: black;
   padding: 10px 20px;
   border-radius: 50%;
-  width: 150px;
+  width: 120px;
   height: 70px;
   display: flex;
   align-items: center;
@@ -243,5 +243,5 @@ ul li a:hover {
   justify-items: space-around;
   font-size: x-large;
   font-weight: bold;
-  color: #333;
+  color: black;
 }
