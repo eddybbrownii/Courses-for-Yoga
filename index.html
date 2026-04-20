@@ -7,51 +7,42 @@
     <meta name="description" content="Final Project for Group 4">
     <title>Recommended Courses for Yoga.</title>
     <link rel="stylesheet" type="text/css" href="FinalCSS.css">
-
-    <style>
-        .logo {
-            margin-bottom: 20px;
-        }
-
-        .logo img {
-            width: 200px;
-            height: auto;
-        }
-    </style>
     <style>
         body {
-            background-image: url('./assets/yoga-beach-sunset-woman-sits-yoga-pose-beach-sunset_14117-161153.avif');
+            background-image: url(./assets/yoga-silhouette-sunset-beach\ \(2\).jpg);
             background-size: cover;
             /* Ensures the image covers the entire background */
             background-repeat: no-repeat;
-
             /* Prevents the image from repeating */
-            .course-section {
-                margin-top: 20px;
-                padding: 20px;
-            }
         }
     </style>
+
 </head>
 
 <body>
+
     <div class="logo">
         <img src="./assets/Driven2beBetter1.png" alt="Yoga Logo" class="logo">
     </div>
 
     <header>
         <h1><a href="index.html"><b><i>Recommended Courses for Yoga.</i></b></a></h1>
+
+        <div id="navbar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="courses.html">Your Courses</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <div id="navbar">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="courses.html">Your Courses</a></li>
-            </ul>
-        </nav>
-    </div>
+    <label for="site-search">Where is your journey taking you:</label>
+    <input type="search" class="site-search" id="ite-search" name="q">
+    <button class="search-button" type="submit">Search</button>
+
     <ul>
         <li><a href="#ytt_training_200_hours">200 Hour YTT Training</a></li>
         <li><a href="#ytt_training_300_hours">300 Hour YTT Training</a></li>

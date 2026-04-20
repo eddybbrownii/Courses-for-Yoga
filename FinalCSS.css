@@ -4,7 +4,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   font-family: "Poppins", sans-serif;
-  background-color: #f0f0f0;
   color: #333333;
   margin: 0;
   padding: 0;
@@ -26,7 +25,9 @@ p {
   line-height: 1.6;
   color: #333;
 }
-
+ul {
+  padding: bottom 250px;
+}
 h1,
 h2 {
   font-weight: 600;
@@ -62,6 +63,7 @@ header h1 a:hover {
   background: #4a4a4a;
   padding: 10px 0;
   text-align: center;
+  padding-bottom: 60px;
 }
 
 #navbar ul {
@@ -155,4 +157,39 @@ ul li a:hover {
     width: 90%;
     padding: 15px;
   }
+}
+.search-bar,
+.site-search,
+.search-bar input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  justify-items: space-around;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: auto;
+}
+.search-bar {
+  padding-top: 1500px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  height: fit-content;
+}
+.search-bar input {
+  border: 1px solid green;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+.site-search {
+  margin-left: 50px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  background-color: #fff;
 }
