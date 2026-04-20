@@ -10,8 +10,8 @@ body {
   padding: 0;
 }
 .logo {
-  max-width: 150px;
-  max-height: 150px;
+  max-width: 0px;
+  max-height: 0px;
 }
 
 p {
