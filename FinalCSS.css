@@ -158,20 +158,7 @@ ul li a:hover {
     padding: 15px;
   }
 }
-.search-bar,
-.site-search,
-.search-bar input {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: center;
-  justify-content: space-around;
-  justify-items: space-around;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  padding: auto;
-}
+
 .search-bar {
   display: flex;
   flex-direction: column;
@@ -229,4 +216,15 @@ ul li a:hover {
   justify-content: center;
   justify-items: center;
   text-align: center;
+}
+.search-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
+  justify-items: space-around;
+  font-size: x-large;
+  font-weight: bold;
+  color: #333;
 }
