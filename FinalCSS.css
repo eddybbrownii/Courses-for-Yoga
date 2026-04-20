@@ -114,6 +114,21 @@ ul li a {
 ul li a:hover {
   background: #5d5d5d;
 }
+.btn-contact {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
+  justify-items: space-around;
+  border: 2px black solid;
+  background-color: darkblue;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 30%;
+  width: 30px;
+  height: 20px;
+}
 
 .course-section {
   display: none;
