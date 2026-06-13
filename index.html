@@ -43,9 +43,15 @@
 
     </header>
     <!--Search Bar  -->
-    <label for="search-title"></label>
-    <input type="search" class="site-search" id="site-search" name="site-search" placeholder="Let's Go!">
-    <button class="search-button" type="submit">Search</button>
+    <div class="search-bar">
+        <div class="search-title">Search courses</div>
+        <div class="search-controls">
+            <label class="search-label" for="site-search">Search yoga course:</label>
+            <input type="search" class="site-search" id="site-search" name="site-search" placeholder="Search course name or keyword">
+            <button class="search-button" type="button" id="search-button">Search</button>
+        </div>
+        <div id="search-results" class="search-results"></div>
+    </div>
     <!--Buttons  -->
     <ul>
         <li><a href="#ytt_training_200_hours">200 Hour YTT Training</a></li>
@@ -87,6 +93,66 @@
     </div>
 
     <script>
+        const sampleResults = [
+            {
+                title: '200 Hour YTT Training',
+                description: 'Learn the essentials of yoga teaching, philosophy, alignment, and hands-on practice so you can confidently lead classes.'
+            },
+            {
+                title: '300 Hour YTT Training',
+                description: 'Deepen your personal practice with advanced sequencing, anatomy, and teaching techniques for more meaningful classes.'
+            },
+            {
+                title: 'Trauma-Sensitive Training Specialty',
+                description: 'Build skills to support students with trauma histories and learn how to create safe, inclusive yoga spaces.'
+            },
+            {
+                title: 'Somatic Coaching',
+                description: 'Explore body-based coaching tools to connect movement, breath, and emotional awareness in teaching.'
+            },
+            {
+                title: 'AI Business Development',
+                description: 'Use modern tools to grow your yoga business, build a brand, and reach more students online.'
+            }
+        ];
+
+        const searchInput = document.getElementById('site-search');
+        const searchButton = document.getElementById('search-button');
+        const searchResults = document.getElementById('search-results');
+
+        function renderSearchResults(results) {
+            if (!searchResults) return;
+
+            if (results.length === 0) {
+                searchResults.innerHTML = '<div class="search-no-results">No results found. Try another keyword.</div>';
+                return;
+            }
+
+            searchResults.innerHTML = results.map(result => {
+                return `
+                    <div class="search-result">
+                        <h3>${result.title}</h3>
+                        <p>${result.description}</p>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function performSearch() {
+            const query = searchInput.value.trim().toLowerCase();
+
+            if (query === '') {
+                renderSearchResults(sampleResults.slice(0, 3));
+                return;
+            }
+
+            const filtered = sampleResults.filter(result => {
+                return result.title.toLowerCase().includes(query) || result.description.toLowerCase().includes(query);
+            });
+
+            renderSearchResults(filtered);
+        }
+
         function showSection() {
             let hash = window.location.hash.substring(1); // Get the part after #
             let sections = document.querySelectorAll('.course-section');
@@ -99,8 +165,14 @@
             });
         }
 
+        searchButton.addEventListener('click', performSearch);
+        searchInput.addEventListener('input', performSearch);
+
         window.addEventListener('hashchange', showSection);
-        window.addEventListener('load', showSection);
+        window.addEventListener('load', () => {
+            showSection();
+            renderSearchResults(sampleResults.slice(0, 3));
+        });
     </script>
 
 </body>
